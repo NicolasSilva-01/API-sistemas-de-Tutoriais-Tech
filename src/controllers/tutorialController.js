@@ -99,21 +99,24 @@ const getAllTutoriais = (req, res) => {
         const tutoriaisAtualizados = tutoriais.map(tutorial => tutorial.id === idParaEditar ? {
           ...tutorial,
           ...(titulo && { titulo }),
-          ...(tipo && {  tipo }),
-          ...(anoFabricacao && {  anoFabricacao: parseInt(anoFabricacao)}),
-          ...(cor && { cor }),
-          ...(quantidadeEstoque && { quantidadeEstoque }),
-        } : personagem)
+          ...(tema && {  tema }),
+          ...(visualizacoes && {  visualizacoes: parseInt(visualizacoes)}),
+          ...(autor && { autor }),
+          ...(duracao && { duracao }),
+          ...(plataforma && {plataforma}),
+          ...(atualizado && {atualizado}),
+          ...(dificuldade && {dificuldade}),
+        } : tutorial)
       
-        personagens.splice(0, personagens.length, ...
-          personagensAtualizados);
+        tutoriais.splice(0, tutoriais.length, ...
+          tutoriaisAtualizados);
       
-          const personagemNovo = personagens.find(personagem => personagem.id === idParaEditar);
+          const tutorialNovo = tutoriais.find(tutorial => tutorial.id === idParaEditar);
       
           res.status(200).json({
             sucess: true,
-            message: `Dados do Personagem ID ${idParaEditar} atualizados com sucesso!`,
-            personagem: personagemNovo
+            message: `Dados do tutorial ID ${idParaEditar} atualizados com sucesso!`,
+            tutorial: tutorialNovo
           })
       
       }
