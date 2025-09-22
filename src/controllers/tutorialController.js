@@ -87,7 +87,7 @@ const getAllTutoriais = (req, res) => {
             message: "O id deve ser um número válido!!!"
           })
         }
-        const TutorialExiste = tutoriais.find(tutorial => tutorial.id === idParaEditar);
+        const tutorialExiste = tutoriais.find(tutorial => tutorial.id === idParaEditar);
       
         if (!tutorialExiste) {
           return res.status(404).json({
@@ -124,4 +124,4 @@ const getAllTutoriais = (req, res) => {
  
   
   
-  export { getAllTutoriais, getTutorialById, createTutorial, deleteTutorial  };
+  export { getAllTutoriais, getTutorialById, createTutorial, deleteTutorial, updateTutorial  };

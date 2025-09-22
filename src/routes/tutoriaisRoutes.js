@@ -5,7 +5,7 @@ import {
   getTutorialById,
   createTutorial,
   deleteTutorial,
-
+  updateTutorial
 
 } from "./../controllers/tutorialController.js";
 
@@ -15,6 +15,7 @@ router.get("/", getAllTutoriais);
 router.get("/:id", getTutorialById);
 router.post("/", createTutorial);
 router.delete("/:id", deleteTutorial);
+router.put("/:id", updateTutorial);
 
 
 export default router;
