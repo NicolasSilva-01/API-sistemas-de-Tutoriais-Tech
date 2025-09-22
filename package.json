@@ -1,0 +1,19 @@
+{
+  "name": "atividadeavaliativa-nicolassilva",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["tutoriais","backend","CRUD"],
+  "author": "Nicolas Silva",
+  "license": "MIT",
+  "description": "atividade avaliativa de tutoriais",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
